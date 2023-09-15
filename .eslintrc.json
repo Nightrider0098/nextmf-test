@@ -1,0 +1,97 @@
+{
+  "extends": [
+    "airbnb",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended",
+    "plugin:styled-components-a11y/recommended"
+  ],
+  "plugins": [
+    "simple-import-sort",
+    "styled-components-a11y"
+  ],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "@next/next/no-img-element": "off",
+    "array-element-newline": [
+      "error",
+      "consistent"
+    ],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": [
+          "draft",
+          "state"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/no-unescaped-entities": "off",
+    "react/forbid-prop-types": "off",
+    "import/no-named-default": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [
+          "Link"
+        ],
+        "specialLink": [
+          "hrefLeft",
+          "hrefRight"
+        ],
+        "aspects": [
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": [
+          "CustomInputLabel"
+        ],
+        "labelAttributes": [
+          "label"
+        ],
+        "controlComponents": [
+          "CustomInput"
+        ],
+        "depth": 3
+      }
+    ],
+    "no-nested-ternary": "error",
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "prefer-arrow-callback": [
+      2,
+      {
+        "allowNamedFunctions": true
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": "error",
+    "import/no-cycle": "error"
+  }
+}
